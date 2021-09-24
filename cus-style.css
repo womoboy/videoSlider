@@ -1,8 +1,16 @@
 
+
+@font-face {
+    font-family: 'Vazir-Thin';
+    src: url('fonts/Vazir-Thin.ttf') format('truetype'),
+        url('fonts/Vazir-Thin.woff') format('woff'),
+        url('fonts/Vazir-Thin.woff2') format('woff2');
+}
 body, * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Vazir-Thin';
 }
 body{
     background-color: rgb(22, 22, 22);
@@ -32,6 +40,7 @@ section > .container {
     width: 100%;
     height: auto;
     filter: blur(4px);
+    z-index: 0;
 }
 
 .slide > .blur-frame {
@@ -41,4 +50,60 @@ section > .container {
     top: 0;
     left: 0;
     background-color: rgba(20, 20, 20, 0.6);
+    z-index: 1;
+}
+
+.slider-content {
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    bottom: 5%;
+    right: 50%;
+    transform: translate(50%, 0);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(150, 150, 150, 0.2);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+
+}
+.text-content {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+}
+.text-content h2 {
+    color: orange;
+    font-size: 18px;
+    padding: 10px;
+}
+.text-content p {
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 10px;
+}
+.cs-btn-01 {
+    width: 130px;
+    height: 40px;
+    position: absolute;
+    bottom: 30px;
+    background-color: whitesmoke;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.cs-btn-01 span {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: purple;
+    background-color: white;
+    clip-path: circle(33.1% at 50% 50%);
+}
+.cs-btn-01 span:nth-child(2) {
+    
 }
