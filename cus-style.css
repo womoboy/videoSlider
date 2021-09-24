@@ -100,10 +100,23 @@ section > .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: purple;
-    background-color: white;
-    clip-path: circle(33.1% at 50% 50%);
+    color: darkorange;
+    background-color: black;
+    transition: 0.5s;
+    
 }
 .cs-btn-01 span:nth-child(2) {
-    
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%);
+    background-color: darkorange;
+    color: black;
+}
+.cs-btn-01 span:nth-child(2):hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    color: gold;
+}
+.cs-btn-01 span:nth-child(1):hover {
+    color: gold;
+}
+.cs-btn-01 span:nth-child(1):hover ~ span:nth-child(2){
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 }
